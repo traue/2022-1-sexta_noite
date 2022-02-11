@@ -11,6 +11,8 @@
 
 ## Preparação do ambiente de desenvolvimento
 
+A preparação do ambiente de desenvolvimento pode ser vista [NESTE LINK](https://docs.google.com/document/d/1TgYQuzwqe_Xem0lTUaEqAIMkD9rfedaFQrlq4H1zQBc/edit?usp=sharing)
+
 ## Atividades
 
 Todas os links de atividades estão disponíveis no Classroom da turma (link no cabeçalho)
