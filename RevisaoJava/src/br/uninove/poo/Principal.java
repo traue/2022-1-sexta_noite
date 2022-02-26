@@ -15,7 +15,7 @@ public class Principal {
         //System.out.println("Ah! legal, você tem " + p.idade + " anos!");
         p.setNome("Thiago G. Traue");
         p.setCpf("123.123.123-00");
-        p.setIdade(200);
+        p.setIdade(34);
         p.setSexo('M');
 
         System.out.println("Nome: " + p.getNome());
@@ -27,5 +27,14 @@ public class Principal {
 
         System.out.println("Agora você tem " + p.getIdade() + " anos!");
 
+        
+        Aluno a = new Aluno();
+        a.setRa(1234);
+        a.setEmail("guigui@uni9.edu.br");
+        a.setCurso("BIRL");
+        a.setNome("Gui gui");
+        a.setCpf("666.6666.777-99");
+        a.setIdade(21);
+        a.setSexo('G');
     }
 }

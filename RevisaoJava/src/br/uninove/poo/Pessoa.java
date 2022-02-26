@@ -77,5 +77,4 @@ public class Pessoa {
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
-
 }
