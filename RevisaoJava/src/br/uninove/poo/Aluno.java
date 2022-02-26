@@ -6,6 +6,14 @@ public class Aluno extends Pessoa  {
     private String email;
     private String curso;
 
+    public Aluno(int ra, String email, String curso,
+            String nome, String cpf, int idade, char sexo) {
+        super(nome, cpf, idade, sexo);
+        this.ra = ra;
+        this.email = email;
+        this.curso  = curso;
+    }
+    
     public int getRa() {
         return ra;
     }

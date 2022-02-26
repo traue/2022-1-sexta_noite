@@ -26,15 +26,30 @@ public class Principal {
         p.fazerAniversario();
 
         System.out.println("Agora você tem " + p.getIdade() + " anos!");
-
         
-        Aluno a = new Aluno();
-        a.setRa(1234);
-        a.setEmail("guigui@uni9.edu.br");
-        a.setCurso("BIRL");
-        a.setNome("Gui gui");
-        a.setCpf("666.6666.777-99");
-        a.setIdade(21);
-        a.setSexo('G');
+        Aluno a = new Aluno(123, "teste", "CC", "Fulano", "12345", 20, 'M');
+//        a.setRa(1234);
+//        a.setEmail("guigui@uni9.edu.br");
+//        a.setCurso("BIRL");
+//        a.setNome("Gui gui");
+//        a.setCpf("666.6666.777-99");
+//        a.setIdade(21);
+//        a.setSexo('G');
+        
+        //pro é uma INSTÂNCIA da classe Professor
+        //pro é OBJETO de Professor
+        Professor pro = new Professor();
+        pro.setNome("Traue");
+        pro.setIdade(34);
+        pro.setMatricula(01200);
+        pro.setAreaConhecimento("Desenvolvimento de Software");
+        pro.setCargaHoraria(38);
+        //..
+        Professor p2 = pro;
+        String nome = "Fulano";
+        p.setNome(nome);
+        
+        System.out.println("O aluno chama-se " + a.getNome());
+        Aluno x = new Aluno(123, "teste@uo", "SI", "Beltrano", "123.123...", 40, 'H');
     }
 }
