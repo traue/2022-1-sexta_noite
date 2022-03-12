@@ -24,29 +24,30 @@
         <hr>
         <br>
         <br>
-        <table border="1px" style="border-style: dotted; text-align: center;"">
+        <table border="1px" style="text-align: center;">
             <thead>
-            <th>Dado</th>
-            <th>Resultado</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>Peso informado: </b></td>
-                <td><%= String.format("%.2f", peso)%></td>
-            </tr>
-            <tr>
-                <td><b>Altura informada: </b></td>
-                <td><%= String.format("%.2f", altura)%></td>
-            </tr>
-            <tr>
-                <td><b>IMC:</b> </td>
-                <td><%= String.format("%.2f", resultado)%></td>
-            </tr>
-            <tr>
-                <td><b>Classificação: </b></td>
-                <td><%= i.calculaClassificacao(resultado)%></td>
-            </tr>
-        </tbody>
+                <th>Dado</th>
+                <th>Resultado</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Peso informado: </b></td>
+                    <td><%= String.format("%.2f", peso)%></td>
+                </tr>
+                <tr>
+                    <td><b>Altura informada: </b></td>
+                    <td><%= String.format("%.2f", altura)%></td>
+                </tr>
+                <tr>
+                    <td><b>IMC:</b> </td>
+                    <td><%= String.format("%.2f", resultado)%></td>
+                </tr>
+                <tr>
+                    <td><b>Classificação: </b></td>
+                    <td><%= i.calculaClassificacao(resultado)%></td>
+                </tr>
+                
+            </tbody>
     </table>
     <br>
     <b>OU...</b>
