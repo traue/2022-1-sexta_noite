@@ -24,8 +24,8 @@
             Cookie cookieNome = new Cookie("nomeUsuario", nomeCodificado);
             Cookie cookieIdade = new Cookie("idadeUsuario", idadeCodificada);
             
-            cookieNome.setMaxAge(60); //em segundos
-            cookieIdade.setMaxAge(30);
+            cookieNome.setMaxAge(120); //em segundos
+            cookieIdade.setMaxAge(120);
             
             response.addCookie(cookieNome);
             response.addCookie(cookieIdade);
