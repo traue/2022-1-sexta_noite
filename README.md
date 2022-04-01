@@ -4,8 +4,7 @@
 
 **Turma:** 37 - sextas à noite
 
-**Sala no classroom:** [NESTE LINK](https://classroom.google.com/c/NDY1OTg2NDMxODEz?cjc=typtt6c)
-
+**CLASSROOM DA DISCIPLINA:** [NESTE LINK](https://classroom.google.com/c/NDY1OTg2NDMxODEz?cjc=typtt6c)
 
 ***
 
@@ -17,10 +16,15 @@ A preparação do ambiente de desenvolvimento pode ser vista [NESTE LINK](https:
 
 Todas os links de atividades estão disponíveis no Classroom da turma (link no cabeçalho)
 
-Todas as atividades serão liberadas ao longo do semestre e poderão ser realizadas em até ao menos 15 dias. 
+Todas as atividades serão liberadas ao longo do semestre e poderão ser realizadas em até ao menos 15 dias.
+
+Atividades liberdas:
+
+- Atividade 1: De 01.04 até 06.05, 19.30
+
+## Critérios de avaliação
 
 Este professor não utliliza nenhuma prova para avaliação, apenas as atividades. A única prova que a turma possui (com este professor) seria a integrada.
-
 
 ## Ementa básica da disciplina
 
