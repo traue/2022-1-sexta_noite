@@ -12,7 +12,7 @@
         <br>
         <%
 
-            String nome = "sem dados para exibir";
+            String nome = "{sem dados para exibir}";
             int idade = -1;
 
             if ((String)session.getAttribute("nomeUsuario") != null) {
