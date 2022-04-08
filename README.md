@@ -20,7 +20,8 @@ Todas as atividades serão liberadas ao longo do semestre e poderão ser realiza
 
 Atividades liberdas:
 
-- Atividade 1: De 01.04 até 06.05, 19.30
+- Atividade 1: De 01.04 até 06.05, 19:30h
+- Atividade 2: De 08.04 até 13.05, 19:30h
 
 ## Critérios de avaliação
 
