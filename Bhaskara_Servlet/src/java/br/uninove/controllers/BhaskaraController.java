@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package br.uninove.controllers;
 
+import br.uninove.model.Bhaskara;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -11,37 +8,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author thiagograzianitraue
- */
 public class BhaskaraController extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet BhaskaraController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet BhaskaraController at " + request.getContextPath() + "</h1>");
-            out.println("<h2>Olá mundo!</h2>");
-            out.println("</body>");
-            out.println("</html>");
-            //paramos aqui... continuamos na aula que vem.. :D
+            int a = Integer.parseInt(request.getParameter("valorA"));
+            int b = Integer.parseInt(request.getParameter("valorB"));
+            int c = Integer.parseInt(request.getParameter("valorC"));
+            String params = "";
+            
+            Bhaskara bhaskara = new Bhaskara();
+            
+            bhaskara.setA(a);
+            bhaskara.setB(b);
+            bhaskara.setC(c);
+            
+            bhaskara.calculaBhaskaraCompleto();
+            
+            params = String.format("a=%s&b=%s&c=%s&delta=%s", 
+                    a, b, c, bhaskara.getDelta());
+            
+            if(bhaskara.getDelta() >= 0) {
+                params += String.format("&xp=%s&xn=%s", 
+                        bhaskara.getXp(), bhaskara.getXn());
+            }
+            
+            response.sendRedirect("resultado.jsp?" + params);
         }
     }
 

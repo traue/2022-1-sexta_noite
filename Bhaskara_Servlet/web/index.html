@@ -4,41 +4,7 @@
         <title>Bhaskara</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-
-            body {
-                font-family: Courier;
-            }
-            
-            .corpo {
-                margin-top: 30px;
-                margin-left: 30px;
-            }
-            
-            form {
-                margin-top: 50px;
-            }
-
-            input[type="number"] {
-                width: 40px;
-                font-size: 24px;
-            }
-            
-            input[type="submit"] {
-                margin-top: 20px;
-                background-color: purple;
-                color: white;
-                font-size: 20px;
-                height: 40px;
-                width: 110px;
-                display: block;
-            }
-            
-            label {
-                font-size: 24px;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <h1>Resolução de Eq. quadrádica por Bhaskara</h1>
@@ -49,14 +15,14 @@
                 equação quadrádica que esteja no formato 
                 ax² + bx + c = 0
             </h3>
-            <form method="post" action="">
-                <input type="number" name="valorA" placeholder="a">
+            <form method="post" action="BhaskaraController">
+                <input type="number" name="valorA" placeholder="a" required>
                 <label>x² +</label>
 
-                <input type="number" name="valorB" placeholder="b">
+                <input type="number" name="valorB" placeholder="b" required>
                 <label>x +</label>
                 
-                <input type="number" name="valorC" placeholder="c">
+                <input type="number" name="valorC" placeholder="c" required>
                 <label> = 0</label>
                 
                 <input type="submit" value="Calcular">

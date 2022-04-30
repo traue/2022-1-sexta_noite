@@ -80,12 +80,13 @@ public class Bhaskara {
 
         resultado[0] = (b * b) - 4 * a * c;
 
+        setDelta(resultado[0]);
+
         if (resultado[0] > 0) {
-            resultado[1] = (-b + Math.sqrt(getDelta()) / (2 * a));
-            resultado[2] = (-b - Math.sqrt(getDelta()) / (2 * a));
+            resultado[1] = (-b + Math.sqrt(getDelta())) / (2 * a);
+            resultado[2] = (-b - Math.sqrt(getDelta())) / (2 * a);
         }
 
-        setDelta(resultado[0]);
         setXp(resultado[1]);
         setXn(resultado[2]);
 
