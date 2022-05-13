@@ -19,4 +19,4 @@ CREATE TABLE tb_aluno(
     id_curso INT,
         CONSTRAINT fk_aluno_curso 
         FOREIGN KEY(id_curso) REFERENCES tb_curso
-)
+);
