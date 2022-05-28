@@ -1,12 +1,12 @@
 package br.sisacademico.controllers;
 
-import br.sisacademico.dao.AlunoDao;
-import br.sisacademico.model.Aluno;
+import br.sisacademico.dao.CursoDao;
+import br.sisacademico.model.Curso;
 import br.sisacademico.util.AcaoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -15,25 +15,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class AlunoController extends HttpServlet {
+public class CursoController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             AcaoDao acao = AcaoDao.valueOf(request.getParameter("acao"));
-            AlunoDao aDao = new AlunoDao();
-            
+            CursoDao cDao = new CursoDao();
+
             switch (acao) {
                 case LEITURA:
-                    ArrayList<Aluno> alunos;
-                    
-                    alunos = aDao.getAlunos();
+                    Map<Curso, Integer> listaCursos = cDao.getCursosCountAlunos();
                     
                     HttpSession session = request.getSession();
                     
-                    session.setAttribute("listaDeAlunos", alunos);
-                    response.sendRedirect("./relatorio/alunos.jsp");
+                    session.setAttribute("listaDeCursos", listaCursos);
+                    
+                    response.sendRedirect("./relatorio/curso.jsp");
+                    
+                    break;
+                case CADASTRO:
+                    break;
+                case EDICAO:
+                    break;
+                case EXCLUSAO:
                     break;
                 default:
                     break;
@@ -56,7 +62,7 @@ public class AlunoController extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(AlunoController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CursoController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -74,7 +80,7 @@ public class AlunoController extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(AlunoController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CursoController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

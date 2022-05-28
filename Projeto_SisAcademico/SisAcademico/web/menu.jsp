@@ -10,7 +10,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<%=request.getContextPath()%>">
                     <img src="<%=request.getContextPath()%>/img/logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
@@ -35,8 +35,8 @@
                                 Relatórios
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Alunos Matriculados</a></li>
-                                <li><a class="dropdown-item" href="#">Cursos Disponíveis</a></li>
+                                <li><a class="dropdown-item" href="<%=request.getContextPath()%>/relatorio/loader.jsp?pagina=aluno">Alunos Matriculados</a></li>
+                                <li><a class="dropdown-item" href="<%=request.getContextPath()%>/relatorio/loader.jsp?pagina=curso">Cursos Disponíveis</a></li>
                             </ul>
                         </li>
                     </ul>

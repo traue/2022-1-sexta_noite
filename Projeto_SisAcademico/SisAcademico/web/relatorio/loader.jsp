@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
@@ -15,7 +15,7 @@
                 if(pagina === 'aluno') {
                     var url = '../AlunoController?acao=LEITURA';
                 } else {
-                    //carregará o controller de curso (ainda não fizemos)
+                    var url = '../CursoController?acao=LEITURA';
                 }
                 
                 $(location).attr('href', url);
@@ -27,4 +27,3 @@
         </div>
     </body>
 </html>
-
