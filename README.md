@@ -24,7 +24,7 @@ Atividades liberdas:
 - **Atividade 2:** De 08.04 até 13.05, 19:30h - Encerrada
 - **Atividade 3:** De 06.05 até 27.05, 19:30h - Encerrada
 - **Atividade 4:** De 13.05 até 03.06, 19:30h - Encerrada
-- **Atividade 5:** De 20.05 até 10.06, 19:30h - Em andamento
+- **Atividade 5:** De 20.05 até 10.06, 19:30h - Encerrada
 
 ## Critérios de avaliação
 
