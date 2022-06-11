@@ -4,5 +4,6 @@ public enum AcaoDao {
     CADASTRO,    //Create
     LEITURA,     //Read
     EDICAO,      //Update
-    EXCLUSAO;    //Delete
+    EXCLUSAO,    //Delete
+    CARREGAMENTO;
 }

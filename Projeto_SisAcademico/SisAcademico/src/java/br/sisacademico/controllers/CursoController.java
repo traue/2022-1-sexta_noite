@@ -20,6 +20,7 @@ public class CursoController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             AcaoDao acao = AcaoDao.valueOf(request.getParameter("acao"));
             CursoDao cDao = new CursoDao();
@@ -36,10 +37,20 @@ public class CursoController extends HttpServlet {
                     
                     break;
                 case CADASTRO:
+                    Curso curso = new Curso();
+                    curso.setNomeCurso(request.getParameter("nomeCurso"));
+                    curso.setTipoCurso(request.getParameter("tipoCurso"));
+                    if(cDao.insereCurso(curso)) {
+                        response.sendRedirect("./relatorio/loader.jsp?pagina=curso");
+                    }
                     break;
                 case EDICAO:
                     break;
                 case EXCLUSAO:
+                    int idCurso = Integer.parseInt(request.getParameter("idCurso"));
+                    if(cDao.deleteCurso(idCurso)) {
+                        response.sendRedirect("./relatorio/loader.jsp?pagina=curso");
+                    }
                     break;
                 default:
                     break;

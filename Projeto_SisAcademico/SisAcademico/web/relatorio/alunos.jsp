@@ -16,7 +16,7 @@
     </head>
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
-        
+        <script src="../js/modal_exclusao.js"></script>
         <% if(alunos != null) { %>
         <div class="container mt-4">
             <div class="table-responsive-md" style="width: 90; margin: 0 auto;">
@@ -37,7 +37,7 @@
                             <td><%= a.getCurso().getNomeCurso() %></td>
                             <td><%= a.getCurso().getTipoCurso() %></td>
                             <td class="text-center"><a class="btn btn-outline-primary" href="#">Editar</a></td>
-                            <td class="text-center"><a class="btn btn-outline-danger" href="#">Excluir</a></td>
+                            <td class="text-center"><a class="btn btn-outline-danger" href="../AlunoController?acao=EXCLUSAO&idAluno=<%=a.getIdAluno()%>" id="deleteAluno">Excluir</a></td>
                         </tr>
                         <% } %>
                     </tbody>

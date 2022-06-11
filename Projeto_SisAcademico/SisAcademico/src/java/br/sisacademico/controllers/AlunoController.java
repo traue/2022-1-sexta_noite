@@ -1,6 +1,7 @@
 package br.sisacademico.controllers;
 
 import br.sisacademico.dao.AlunoDao;
+import br.sisacademico.dao.CursoDao;
 import br.sisacademico.model.Aluno;
 import br.sisacademico.util.AcaoDao;
 import java.io.IOException;
@@ -20,20 +21,29 @@ public class AlunoController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             AcaoDao acao = AcaoDao.valueOf(request.getParameter("acao"));
             AlunoDao aDao = new AlunoDao();
-            
+            CursoDao cDao = new CursoDao();
+            HttpSession session = request.getSession();
             switch (acao) {
                 case LEITURA:
                     ArrayList<Aluno> alunos;
-                    
                     alunos = aDao.getAlunos();
-                    
-                    HttpSession session = request.getSession();
-                    
                     session.setAttribute("listaDeAlunos", alunos);
                     response.sendRedirect("./relatorio/alunos.jsp");
+                    break;
+                case EXCLUSAO:
+                    int idAluno = Integer.parseInt(request.getParameter("idAluno"));
+                    if(aDao.deleteAluno(idAluno)) {
+                        response.sendRedirect("./relatorio/loader.jsp?pagina=aluno");
+                    }
+                case CARREGAMENTO:
+                    session.setAttribute("listaCursos", cDao.getTodosCursos());
+                    response.sendRedirect("./cadastro/aluno.jsp");                    
+                case CADASTRO:
+                    //paramos aqui
                     break;
                 default:
                     break;
